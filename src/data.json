@@ -1,0 +1,61 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "UI Development",
+      "price": 22000,
+      "duration": "5 weeks"
+    },
+    {
+      "id": 2,
+      "courseName": "Data Structures",
+      "price": 18000,
+      "duration": "4 weeks"
+    },
+    {
+      "id": 3,
+      "courseName": "Advanced Algorithms",
+      "price": 6000,
+      "duration": "2 weeks"
+    },
+    {
+      "id": 4,
+      "courseName": "Full Stack - React and Node.js",
+      "price": 25000,
+      "duration": "8 weeks"
+    }
+  ],
+  "userDetails": [
+    {
+      "id": 1,
+      "email": "monica@gmail.com",
+      "password": "firstapp"
+    },
+    {
+      "id": 2,
+      "email": "joey@gmail.com",
+      "password": "assignment"
+    },
+    {
+      "id": 3,
+      "email": "rachael@hotmail.com",
+      "password": "toughone"
+    }
+  ],
+  "enquiriesList": [
+    {
+      "id": 1,
+      "email": "srijasingh@gmail.com",
+      "coursesEnquired": [
+        "Data Structures"
+      ]
+    },
+    {
+      "id": 2,
+      "email": "fgth@gmail.com",
+      "coursesEnquired": [
+        "Full Stack - React and Node.js"
+      ]
+    }
+  ]
+}
