@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Form = () => {
 
@@ -47,9 +47,9 @@ const Form = () => {
                     coursesEnquired: courseList
                 }),
         }).then((res2) => {
-            setEmail(null);
-            setPassword(null);
-            setCourseList(null);
+            setEmail("");
+            setPassword("");
+            setCourseList([]);
         })
 
         }
@@ -57,7 +57,9 @@ const Form = () => {
     console.log("mess".mess);
 
     return(
-        <div className="enquiryForm" style={{margin:"50px 100px"}}>
+        <div>
+        <button type="submit" style={{marginLeft:"30px", marginTop:"20px"}}><Link to={`/`}>Home</Link></button>
+        <div className="enquiryForm" style={{margin:"20px 33%"}}>
             <h2>Enquiry for the course: {name}
             </h2>
             <p>Please enter your details</p>
@@ -70,6 +72,7 @@ const Form = () => {
                 {mess}
             </div>
 
+        </div>
         </div>
     );
 }

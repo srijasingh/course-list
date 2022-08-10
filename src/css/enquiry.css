@@ -1,9 +1,18 @@
+.display-enquiry{
+    width: 500px;
+    margin-left: 650px;
+    margin-top:-10px;
+}
 .enquiries{
     border: 1px solid black;
     border-radius: 10px;
     font-size: 16px;
-    width: 500px;
+    width: 450px;
     text-align: center;
     height: 100px;
     margin: 20px 33% 20px;
+}
+.new-enquiry{
+    width: 400px;
+    margin: -280px 15%;
 }

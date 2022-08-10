@@ -1,27 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getCoursesData } from "../redux/actions";
 import "./../css/home.css";
 
 const Home = () => {
+    const dispatch = useDispatch();
+    const { courses } = useSelector((state) => ({
+        courses: state?.Reducer?.courses
+    }));
 
-    const [courses, setCourses] = useState(null);
     useEffect(()=>{
-        const res = fetch("http://localhost:6700/courses", {
-            method: "GET"
-        })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
-            setCourses(data);
-        });
+        dispatch(getCoursesData());
     },[]);
+
+    // const [courses, setCourses] = useState(null);
+    // useEffect(()=>{
+    //     const res = fetch("http://localhost:6700/courses", {
+    //         method: "GET"
+    //     })
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //         console.log(data);
+    //         setCourses(data);
+    //     });
+    // },[]);
 
     return(
         <div>
             <div>
             <div>
-                <h3><button type="submit" className="enquiryButton"><Link to={`/enquiries`}>Enquiries</Link></button></h3> 
+                <h3><button type="submit" style={{marginLeft:"30px"}}><Link to={`/enquiries`}>Enquiries</Link></button></h3> 
              </div>
+             <div className="course-div">
             <h2><center>Courses Offered</center></h2>
             {courses?.map((list)=>{ return(
                 <div className="courses">
@@ -34,6 +45,7 @@ const Home = () => {
                 </div>
             )
             })}
+            </div>
             </div>
         </div>
         
